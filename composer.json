@@ -1,0 +1,19 @@
+{
+    "name": "golliaphuth/bybit",
+    "description": "Bybit API",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Golliaphuth",
+            "email": "golliaphuth@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Golliaphuth\\Bybit\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {}
+}
