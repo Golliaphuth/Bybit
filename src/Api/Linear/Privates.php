@@ -9,8 +9,9 @@ class Privates extends Request
 {
     public function getOrder($options)
     {
-        $this->init($options);
+        $this->method = 'GET';
         $this->endpoint = '/private/linear/order/list';
+        $this->init($options);
 
         $this->response = Http::withHeaders($this->headers)
             ->get(env('BYBIT_API_HOST') . $this->endpoint . '?' . http_build_query($this->options));
@@ -18,9 +19,11 @@ class Privates extends Request
         return $this->response->json();
     }
 
-    public function createOrder($options) {
-        $this->init($options);
+    public function createOrder($options)
+    {
+        $this->method = 'POST';
         $this->endpoint = '/private/linear/order/create';
+        $this->init($options);
 
         $this->response = Http::withHeaders($this->headers)
             ->post(env('BYBIT_API_HOST') . $this->endpoint, $this->options);
@@ -28,9 +31,11 @@ class Privates extends Request
         return $this->response->json();
     }
 
-    public function cancelOrder($options) {
-        $this->init($options);
+    public function cancelOrder($options)
+    {
+        $this->method = 'POST';
         $this->endpoint = '/private/linear/order/cancel';
+        $this->init($options);
 
         $this->response = Http::withHeaders($this->headers)
             ->post(env('BYBIT_API_HOST') . $this->endpoint, $this->options);

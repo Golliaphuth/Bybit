@@ -13,9 +13,19 @@ class Request
     public function init($options)
     {
         $this->options = $options;
-        $this->headers = [
-            'Content-Type' => 'application/json'
-        ];
+        switch($this->method) {
+            case 'GET':
+                $this->headers = [
+                    'Content-Type' => 'application/x-www-form-urlencoded'
+                ];
+                break;
+            default:
+                $this->headers = [
+                    'Content-Type' => 'application/json'
+                ];
+                break;
+        }
+
         $this->options = array_merge($this->options, [
             'api_key' => env('BYBIT_API_KEY'),
             'timestamp' => time() * 1000,
