@@ -7,19 +7,14 @@
 composer require golliaphuth/bybit
 ```
 
-<h3 align="left">env</h3>
-<hr>
-<ul>
-<li>BYBIT_API_HOST="https://api-testnet.bybit.com"</li>
-<li>BYBIT_API_KEY=******************</li>
-<li>BYBIT_API_KEY_SECRET=************************************</li>
-</ul>
-<hr>
-<br>
+### env
+```
+BYBIT_API_HOST="https://api-testnet.bybit.com"
+BYBIT_API_KEY=******************
+BYBIT_API_KEY_SECRET=************************************
+```
 
-<h3 align="left">Examples</h3>
-<hr>
-
+### Examples
 ```php
 $bybit = new Bybit();
 $response = $bybit->linear()->privates()->getOrder([
@@ -28,5 +23,3 @@ $response = $bybit->linear()->privates()->getOrder([
 ]);
 dd($response);
 ```
-<hr>
-
