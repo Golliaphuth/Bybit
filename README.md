@@ -1,7 +1,12 @@
 <h1 align="center">Bybit</h1>
 <h2 align="center">Bybit API for Laravel </h2>
 <br>
-<br>
+<h3 align="left">Install</h3>
+
+```
+composer require golliaphuth/bybit
+```
+
 <h3 align="left">env</h3>
 <hr>
 <ul>
