@@ -17,9 +17,8 @@ BYBIT_API_KEY_SECRET=************************************
 ### Examples
 ```php
 $bybit = new Bybit();
-$response = $bybit->linear()->privates()->getOrder([
+$response = $bybit->spot()->market()->getBestBidAskPrice([
     'symbol' => 'BTCUSDT',
-    'order_id' => '048998bc-5003-4e3b-8089-5e16461e19cf'
 ]);
 dd($response);
 ```

@@ -4,13 +4,18 @@ namespace Golliaphuth\Bybit\Api\Spot;
 
 class Spot
 {
-    public function publics()
+    public function account()
     {
-        return new Publics();
+        return new Account();
     }
 
-    public function privates()
+    public function order()
     {
-        return new Privates();
+        return new Order();
+    }
+
+    public function market()
+    {
+        return new Market();
     }
 }
