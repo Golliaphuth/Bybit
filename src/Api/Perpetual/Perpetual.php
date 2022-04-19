@@ -1,8 +1,8 @@
 <?php
 
-namespace Golliaphuth\Bybit\Api\Spot;
+namespace Golliaphuth\Bybit\Api\Perpetual;
 
-class Spot
+class Perpetual
 {
     public function order()
     {
@@ -13,5 +13,4 @@ class Spot
     {
         return new Market();
     }
-
 }
