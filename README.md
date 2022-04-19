@@ -33,10 +33,9 @@ BYBIT_API_KEY_SECRET=************************************
 
 ### getOrder
 #### Options
-| name          | required | type   |
-|---------------|----------|--------|
-| orderId       | false    | string |
-| orderLinkId 	 | false    | string |
+| name                  | required | type   |
+|-----------------------|----------|--------|
+| orderId / orderLinkId | true     | string |
 #### Example
 ```php
 $bybit = new Bybit();
